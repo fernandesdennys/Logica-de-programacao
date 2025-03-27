@@ -8,12 +8,14 @@
   <body>
     <h1>Segundo Exemplo</h1>
     <script>
-      let num1 = prompt('Digite um Número');
+      let num1 = prompt('Digite um Número')
+      num1 = Number(num1);
       //num1 = parseFloat(num1)
-      let num2 = prompt('Digite outro Número');
-      //num2 = parseFloat(n13um2)
-      alert(`O resultado é ${parseFloat(num1) + parseFloat(num2)}`);
-
+      let num2 = prompt('Digite outro Número')
+      num2 = Number(num2);
+      //num2 = parseFloat(num2)
+      //alert(`O resultado é ${parseFloat(num1) + parseFloat(num2)}`);
+      alert("O resultado é: " + (num1 + num2))
       //Number(), parseInt(), parseFloat()
     </script>
   </body>
