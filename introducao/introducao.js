@@ -1,1 +1,1 @@
-alert('Ola de arquivo externo')
+alert('Olá MUNDO!')
