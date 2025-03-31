@@ -1,4 +1,3 @@
-// Solicita as notas ao usuário e converte para número decimal
 let n1 = parseFloat(prompt("Digite a primeira nota:"));
 let n2 = parseFloat(prompt("Digite a segunda nota:"));
 
