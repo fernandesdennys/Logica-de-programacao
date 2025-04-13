@@ -6,7 +6,6 @@ const pessoas = [
   { nome: "Neusa", email: "contato5@gmail.com" }
 ]
 const listaPessoas = document.getElementById("body_EmailUsers")
-for (let i = 0; i < pessoas.length; i++){
-  
+for (let i = 0; i < pessoas.length; i++) {
+  listaPessoas.innerHTML += `<li> ${pessoas[i].nome}: ${pessoas[i].email} </li>`
 }
-  listaPessoas.innerHTML += "<li> Test: test@server.com </li>"
