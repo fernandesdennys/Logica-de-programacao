@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +7,9 @@
   </head>
   <body>
     <h1>Função</h1>
-    <input type="number" name="" id="number" />
+    <input type="number" name="" id="number" value="1" />
     <button onclick="mostraTabuada()">Mostrar Tabuada</button>
+    <button onclick="limparTabuada()" id="limparTabuada">Limpar Tabuada</button>
     <div id="output"></div>
   </body>
   <script>
@@ -20,6 +21,8 @@
     function mostraTabuada() {
       const inputValue = parseFloat(input.value);
       alert(`Cliquei no botão e o numero é ${inputValue}`);
+      limparTabuada();
+
       for (let i = 1; i <= 100; i++) {
         tabuataHTML += `${i} x ${inputValue} = ${i * inputValue} <br>`;
       }
@@ -29,5 +32,11 @@
       }
       output.innerHTML = tabuataHTML;
     }
+
+    function limparTabuada() {
+      tabuataHTML = '';
+      output.innerHTML = '';
+    }
+    mostraTabuada();
   </script>
 </html>
