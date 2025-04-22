@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício - SOMA</title>
+  </head>
+  <body>
+    <h1>FUNÇÃO SOMAR</h1>
+  </body>
+  <script>
+    function somar(x, y) {
+      return x + y;
+    }
+    console.log(somar(12, 88));
+
+    console.log('--------------------------------------');
+
+    function calcular(n1, n2, simbol) {
+      switch (simbol) {
+        case '+':
+          return n1 + n2;
+        case '-':
+          return n1 - n2;
+        case '*':
+          return n1 * n2;
+        case '/':
+          return n1 / n2;
+        default:
+          return null;
+      }
+    }
+    console.log(calcular(10, 20, '+'));
+    console.log(calcular(14, 6, '-'));
+    console.log(calcular(3, 66, '*'));
+    console.log(calcular(10, 2, '/'));
+    console.log(calcular(15, 66, 'a'));
+
+    console.log('--------------------------------------');
+
+    function par(number) {
+      return number % 2 === 0;
+    }
+    console.log(par(24));
+
+    console.log('--------------------------------------');
+
+    function anoBissexto(ano) {
+      return ano % 4 === 0 && (ano % 100 !== 0 || ano % 400 === 0);
+    }
+    console.log(anoBissexto(2000));
+    console.log(anoBissexto(1800));
+  </script>
+</html>
