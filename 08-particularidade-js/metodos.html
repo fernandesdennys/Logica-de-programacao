@@ -13,9 +13,12 @@
         nome: 'caneta',
         quantidade: 10,
         comprar: function (qtd) {
-          if(qtd > this.quantidade){
-            console.log("Quantidade insuficiente, quantidade em estoque é de:", this.quantidade)
-            return null
+          if (qtd > this.quantidade) {
+            console.log(
+              'Quantidade insuficiente, quantidade em estoque é de:',
+              this.quantidade
+            );
+            return null;
           }
           console.log(`comprar caneta`);
           this.quantidade -= qtd;
@@ -28,15 +31,15 @@
       produto.quantidade -= 3;
 
       console.log(produto);
-      
+
       //Comprar 14 canetas
       produto.quantidade -= 14;
-      
+
       produto.quantidade = 10;
-      
+
       produto.comprar(3);
       produto.comprar(13);
-      console.log(produto)
+      console.log(produto);
     </script>
   </body>
 </html>
