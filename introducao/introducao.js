@@ -1,1 +1,0 @@
-alert('Ola de arquivo externo')
