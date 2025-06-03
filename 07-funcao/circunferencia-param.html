@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área da circunferência</title>
+  </head>
+  <body>
+    <h1>Área da circunferência</h1>
+    <label>
+      Raio
+      <input type="number" id="raio" />
+    </label>
+    <button onclick="mostAreaPrompt()">Cálcular Área do Prompt</button>
+    <button onclick="mostAreaInput()">Cálcular Área do Input</button><br />
+
+    <output id="output"></output>
+  </body>
+
+  <script>
+    const raio = document.getElementById('raio');
+    const output = document.getElementById('output');
+
+    function mostAreaPrompt() {
+      let raioValue = parseFloat(prompt('Digite o raio'));
+      mostrarArea(raioValue);
+    }
+
+    function mostAreaInput() {
+      let raioValue = parseFloat(raio.value);
+      mostrarArea(raioValue); //Variáveis primitivas (string, number, boolean)
+    }
+
+    function mostrarArea(raio) {
+      const pi = Math.PI;
+      let area = pi * raio * raio; // raio ** 2
+      output.innerHTML = `A área da circunferência de ${raio} é ${area}`;
+    }
+  </script>
+</html>

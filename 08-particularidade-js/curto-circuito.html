@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curto-circuito</title>
+  </head>
+  <body>
+    <h1>Curto-circuito</h1>
+
+    <p></p>
+
+    <script>
+      let n = 0; //truthy
+      n = n || 10; 
+  // truthy   falsy
+      let n1 = 10; //falsy
+      n1 = n1 && 20;
+  //  falsy   truthy
+      console.log(n);
+
+      true || alert('passou');
+      true;
+      false || alert('passou');
+      //undefined
+      true && alert('passou');
+      true;
+      false && alert('passou');
+      false;
+
+      n = n.toString(10) //toString com parametro muda a base do número
+      console.log(n, typeof n)
+      n = 10
+
+      n = n.toString(2)
+      console.log(n, typeof n)
+
+      function teste(param) {
+        param = param || 10
+     // param = param !== undefined ? param : 10
+
+        console.log(param)
+      }
+      teste()
+      teste(20)
+  /* BINÁRIO
+      0 -> 0
+      1 -> 1
+      2 -> 10
+      3 -> 11
+
+     EXADECIMAL
+      0 -> 0
+      9 -> 9
+      10 -> a
+      11 -> b
+      12 ->  c 
+  */
+    </script>
+  </body>
+</html>
