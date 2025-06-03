@@ -32,10 +32,19 @@
           return null;
         }
         this.estoque -= quant;
-      }
-      adicionar() {
-        this.estoque += quant;
         console.log(`Você comprou ${quant} unidades do produto ${this.nome}`);
+      }
+      adicionar(quant) {
+        if (quant < 0) {
+          throw Error('Quantidade não pode ser negativa!');
+        }
+        this.estoque += quant;
+        console.log(`Você adicionou ${quant} unidades do produto ${this.nome}`);
+      }
+      quantEstoque() {
+        console.log(
+          `Estoque do produto ${this.name}: ${this.estoque} unidades`
+        );
       }
     }
     const caneta = new Produto('caneta', 10);
