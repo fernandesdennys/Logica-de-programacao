@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POO</title>
+  </head>
+  <body>
+    <p>
+      Criar uma classe Contador que inicialmente tenha um valor zero. A classe
+      deve ter um método público incementer() para aumentar o contador em um, e
+      um método público valorAtual() para retornar o valor atual do contador. No
+      entanto, o acesso direto ao valor do contador deve ser proibido(privado),
+      garantindo que o contador só possa ser modificado através dos métodos
+      definidos.
+    </p>
+  </body>
+
+  <script>
+    class Contador {
+      #contador; //Propriedade privada
+      constructor() {
+        this.#contador = 0;
+      }
+      incementar() {
+        this.#contador++;
+      }
+      valorAtual() {
+        return this.#contador;
+      }
+    }
+    const contador = new Contador();
+    contador.incementar();
+    contador.incementar();
+    contador.incementar();
+    console.log(contador.valorAtual());
+  </script>
+</html>
