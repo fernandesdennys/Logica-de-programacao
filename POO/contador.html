@@ -18,21 +18,20 @@
 
   <script>
     class Contador {
-      #contador; //Propriedade privada
-      constructor() {
-        this.#contador = 0;
+      #saldo; //Propriedade privada
+      constructor(saldoInicial) {
+        this.#saldo = saldoInicial;
       }
-      incementar() {
-        this.#contador++;
-      }
-      valorAtual() {
-        return this.#contador;
+      get saldo() {
+        return `O saldo atual é de ${this.#saldo}` 
       }
     }
-    const contador = new Contador();
-    contador.incementar();
-    contador.incementar();
-    contador.incementar();
-    console.log(contador.valorAtual());
+    const minhaConta = new ContaBancaraia(100)
+    console.log(minhaConta.saldo)
+
+    minhaConta.saldo = 1000
+
+
+    
   </script>
 </html>
