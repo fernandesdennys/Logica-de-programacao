@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Criar uma classe ContaBancaria que tenha uma prorpiedade para o saldo.
+      Utilizar getters e setters para atualizar o saldo. O saldo só pode ser
+      atualizado através de depósitos e saques. Implementar métodos para
+      depósito(depositar(valor)) e saque(sacar(valor)), onde o saque só é
+      prmitido se houver saldo suficiente.
+    </p>
+    <script>
+      class ContaBancaria {
+        #saldo; // Propriedade privada para o saldo
+
+        constructor(saldoInicial) {
+          this.#saldo = saldoInicial;
+        }
+        get saldo() {
+          return `O saldo atual é de ${this.#saldo}`;
+        }
+        set saldo(novoSaldo) {
+          console.log("O saldo não pode ser atualizado diretamente.");
+        }
+
+        depositar(valor) {
+          if (valor > 0) {
+            this.#saldo += valor;
+            console.log(`Depósito de ${valor} realizado com sucesso.`);
+          }
+        }
+        sacar(valor) {
+          if(valor > 0 && this.#saldo >= valor) {
+            this.#saldo -= valor;
+            return valor;
+            console.log(`Saque de ${valor} realizado com sucesso.`);
+          }else {
+            console.log("Saldo insuficiente para saque.");
+          }
+        }
+
+      }
+      const minhaConta = new ContaBancaria(1000);
+      minhaConta.saldo = 5000; // Tentativa de atualizar o saldo diretamente
+      minhaConta.sacar(200);
+      minhaConta.depositar(500);
+      minhaConta.sacar(2000); // Tentativa de saque com saldo insuficiente
+      console.log(minhaConta.saldo);
+
+      minhaConta.depositar(500);
+      console.log(minhaConta.saldo);
+
+    // Herança(extends)
+    // Classes abstratas
+    // Polimorfismo
+    // Interfaces
+    // Encapsulamento
+    // Métodos e propriedades estáticas
+    // Métodos públicos e privados
+    // Associação, agregação e composição
+    // Polimorfismo de inclusão e sobrecarga
+
+    </script>
+  </body>
+</html>
