@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Deleta</title>
+  </head>
+  <body>
+    <script>
+      // remover o último elemento do array
+      const arr = [1, 9, 0, 6]; // length = 4 - ultimo índice = 3
+      arr.length = arr.length - 1; // length = 3 - ultimo índice = 2
+      console.log(arr);
+
+      arr.pop(); // length = 2 - ultimo índice = 1
+      console.log(arr);
+      
+      // remover o primeiro elemento do array
+      const arr2 = [1, 9, 0, 6];
+      for(let i = 0; i < arr2.length; i++) { 
+        arr2[i] = arr2[i + 1]; 
+      }
+      arr2.pop(); // length = 3 - ultimo índice = 2
+      console.log(arr2);
+      
+      arr2.shift(); // length = 2 - ultimo índice = 1
+      console.log(arr2);
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Inserir</title>
+</head>
+<body>
+  <script>  
+    const arr = [1,2,3,4]; // length = 4 - ultimo índice = 3
+//              [0,1,2,3] indices
+    arr[arr.length] = 5; // Inserindo o valor 5 na posição 4
+    console.log(arr); // [1,2,3,4,5]
+
+    //Inserir no final da array
+    const arr1 = [2,4,6,8];
+    arr1.push(10); // Inserindo o valor 10 no final da array
+    arr1.push(12,14,16); // Inserindo múltiplos valores no final da array
+    console.log(arr1); // [2,4,6,8,10,12,14,16]
+    
+
+    //Inserir no início da array
+    const arr2 = [1,2,3];
+    for (let i = arr2.length; i > 0; i--) {
+      arr2[i] = arr2[i - 1]; // Desloca os elementos para a direita
+    }
+    arr2[0] = 0; // Insere o valor 0 na posição 0
+    console.log(arr2); // [0,1,2,3]
+    
+    arr2.unshift(-2, -1); // Inserindo múltiplos valores no início da array
+    console.log(arr2); // [-2,-1,0,1,2,3
+
+  </script>
+</body>
+</html>
