@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack</title>
+  </head>
+  <body>
+    <script>
+      class Stack {
+        constructor() {
+          this.stack = [];
+        }
+        // [[[   MÉTODOS   ]]]
+        // adicionar elemento na pilha
+        push(novoElemento) {
+          this.stack.push(novoElemento);
+        }
+        // verificar se a pilha está vazia
+        isEmpty() {
+          this.stack.length === 0;
+        }
+        // remover elemento da pilha
+        pop() {
+          if (this.isEmpty()) {
+            throw new Error('A piha está vazia');
+          }
+          return this.stack.pop();
+        }
+
+        // verificar o topo da pilha
+        peek() {
+          if (this.isEmpty()) {
+            return null;
+          }
+          return this.stack[this.stack.length - 1];
+        }
+        // limpar a pilha
+        clear() {
+          this.stack.length = 0; // ou this.stack = []
+        }
+        // obter o número de elemntos da pilha
+        get size() {
+          return this.stack.length;
+        }
+      }
+
+      //LIFO - Last In First Out (ULTIMO A ENTRAR, PRIMEIRO A SAIR)
+      //FILO - First In Last Out (PRIMEIRO A ENTRAR, ULTIMO A SAIR)
+    </script>
+  </body>
+</html>
