@@ -18,7 +18,7 @@
         }
         // verificar se a pilha está vazia
         isEmpty() {
-          this.stack.length === 0;
+          return this.stack.length === 0;
         }
         // remover elemento da pilha
         pop() {
@@ -44,6 +44,41 @@
           return this.stack.length;
         }
       }
+
+      const myStack = new Stack()
+      
+      console.log(myStack.isEmpty()) //true
+      myStack.push(1)
+      myStack.push(2)
+      myStack.push(3)
+      console.log(myStack.isEmpty()) //false
+
+      console.log(myStack.peek()) //3
+      myStack.pop()
+      myStack.pop()
+      console.log(myStack.peek()) //1
+      myStack.pop()
+      console.log(myStack.peek()) //null
+      console.log(myStack.isEmpty()) //true
+      console.log(myStack.size) //0
+      myStack.push(4)
+      console.log(myStack.size) //1
+      console.log(myStack.isEmpty()) //true
+      myStack.push()
+      console.log(myStack.clear()) //0
+      console.log(myStack.isEmpty()) //false
+
+
+
+
+
+
+
+
+
+
+
+
 
       //LIFO - Last In First Out (ULTIMO A ENTRAR, PRIMEIRO A SAIR)
       //FILO - First In Last Out (PRIMEIRO A ENTRAR, ULTIMO A SAIR)
