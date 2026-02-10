@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack</title>
+  </head>
+  <body>
+    <script>
+      class Stack {
+        constructor(limitSize) {
+          if(limitSize && limitSize <= 0 ) {
+            throw new Error ('Limite não pode ser menor ou igual a zero')
+          }
+          this.stack = []
+          this.limit = limitSize  || null
+        }
+        // [[[   MÉTODOS   ]]]
+        // adicionar elemento na pilha
+        push(novoElemento) {
+          this.stack.push(novoElemento);
+        }
+        // verificar se a pilha está vazia
+        isEmpty() {
+          return this.stack.length === 0;
+        }
+        // remover elemento da pilha
+        pop() {
+          if (this.isEmpty()) {
+            throw new Error('A piha está vazia');
+          }
+          return this.stack.pop();
+        }
+
+        // verificar o topo da pilha
+        peek() {
+          if (this.isEmpty()) {
+            return null;
+          }
+          return this.stack[this.stack.length - 1];
+        }
+        // limpar a pilha
+        clear() {
+          this.stack.length = 0; // ou this.stack = []
+        }
+        // obter o número de elemntos da pilha
+        get size() {
+          return this.stack.length;
+        }
+      }
+
+      const myStack = new Stack()
+      
+      console.log(myStack.isEmpty()) //true
+      myStack.push(1)
+      myStack.push(2)
+      myStack.push(3)
+      console.log(myStack.isEmpty()) //false
+
+      console.log(myStack.peek()) //3
+      myStack.pop()
+      myStack.pop()
+      console.log(myStack.peek()) //1
+      myStack.pop()
+      console.log(myStack.peek()) //null
+      console.log(myStack.isEmpty()) //true
+      console.log(myStack.size) //0
+      myStack.push(4)
+      console.log(myStack.size) //1
+      console.log(myStack.isEmpty()) //true
+      myStack.clear()
+      console.log(myStack.size) //0
+      console.log(myStack.isEmpty()) //false
+
+
+
+
+
+
+
+
+
+
+
+
+
+      //LIFO - Last In First Out (ULTIMO A ENTRAR, PRIMEIRO A SAIR)
+      //FILO - First In Last Out (PRIMEIRO A ENTRAR, ULTIMO A SAIR)
+    </script>
+  </body>
+</html>
